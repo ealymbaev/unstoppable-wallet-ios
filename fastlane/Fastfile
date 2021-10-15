@@ -43,7 +43,8 @@ def prepare_environment
   increment_build_number(xcodeproj: "./UnstoppableWallet/UnstoppableWallet.xcodeproj")
 
 #   cocoapods(repo_update: true)
-  cocoapods(clean_install: true)
+#   cocoapods(clean_install: true)
+  cocoapods
 end
 
 platform :ios do
