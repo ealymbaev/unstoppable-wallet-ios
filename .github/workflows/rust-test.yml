@@ -22,8 +22,8 @@ jobs:
           ruby-version: 3.0.2
 #          bundler-cache: true
 
-      - run: cargo lipo
-#      - uses: actions-rs/toolchain@v1
-#        with:
-#          toolchain: stable
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
 #      - run: cargo install cargo-lipo
+      - run: cargo lipo
