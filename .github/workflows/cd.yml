@@ -22,11 +22,16 @@ jobs:
           ruby-version: 3.0.2
 #          bundler-cache: true
 
-      - uses: actions-rs/toolchain@v1
+      - name: Setup Rust and Cargo
+        uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cargo install cargo-lipo
-      - run: rustup target add aarch64-apple-ios x86_64-apple-ios
+
+      - name: Install Lipo via Cargo
+        run: cargo install cargo-lipo
+
+      - name: Add iOS targets to Rust
+        run: rustup target add aarch64-apple-ios x86_64-apple-ios
 
       - name: Deploy iOS Beta to AppCenter via Fastlane
         uses: maierj/fastlane-action@v2.0.1
