@@ -1,0 +1,29 @@
+name: Rust Test
+
+on:
+  pull_request:
+    branches: [ version/* ]
+
+  # Allows you to run this workflow manually from the Actions a tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Testing Cargo Lipo
+    runs-on: macos-11
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby to v3
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.2
+#          bundler-cache: true
+
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - run: cargo install cargo-lipo
+      - run: rustup target add aarch64-apple-ios x86_64-apple-ios
