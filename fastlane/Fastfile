@@ -86,6 +86,8 @@ platform :ios do
 #     cert(username: ENV['ITUNES_CONNECT_USERNAME'], team_id: options[:dp_team_id])
 #     sigh(app_identifier: "io.horizontalsystems.bank-wallet.dev", force: true, adhoc: true, username: ENV['ITUNES_CONNECT_USERNAME'], team_id: options[:dp_team_id])
 
+    xcversion(version: "13.0")
+
     gym(
 #       configuration: "Release",
 #       workspace: "your_project_workspace.xcworkspace",
