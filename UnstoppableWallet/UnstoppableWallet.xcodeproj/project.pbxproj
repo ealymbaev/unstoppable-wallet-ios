@@ -9258,12 +9258,13 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "UnstoppableWallet/Configuration/Unstoppable D.entitlements";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HC4MCAXJ66;
 				MARKETING_VERSION = 0.23;
 				OfficeMode = true;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.horizontalsystems.bank-wallet.dev";
 				PRODUCT_MODULE_NAME = Unstoppable_Dev;
 				PRODUCT_NAME = "Unstoppable D";
-				PROVISIONING_PROFILE_SPECIFIER = "io.horizontalsystems.bank-wallet.dev AdHoc";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc io.horizontalsystems.bank-wallet.dev";
 				ShowBuildNumber = true;
 			};
 			name = Release;
