@@ -26,4 +26,4 @@ jobs:
         with:
           toolchain: stable
       - run: cargo install cargo-lipo
-      - run: cargo lipo
+      - run: rustup target add aarch64-apple-ios x86_64-apple-ios
