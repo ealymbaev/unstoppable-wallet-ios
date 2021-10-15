@@ -25,5 +25,5 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-#      - run: cargo install cargo-lipo
+      - run: cargo install cargo-lipo
       - run: cargo lipo
