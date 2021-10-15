@@ -10,14 +10,20 @@ on:
 jobs:
   deploy:
     name: Deploying to AppCenter
-    runs-on: macOS-latest
+    runs-on: macos-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby to v3
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.2
+          bundler-cache: true
 
       - name: Deploy iOS Beta to AppCenter via Fastlane
-        uses: maierj/fastlane-action@v1.4.0
+        uses: maierj/fastlane-action@v2.0.1
         with:
           lane: dev
         env:
